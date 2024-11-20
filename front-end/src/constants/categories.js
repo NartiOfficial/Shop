@@ -1,14 +1,14 @@
 export const GENDERS = [
 	{
-		categoryName: "Kobieta",
+		categoryName: "kobieta",
 		path: "kobieta",
 	},
 	{
-		categoryName: "Mężczyzna",
+		categoryName: "mezczyzna",
 		path: "mezczyzna",
 	},
 	{
-		categoryName: "Dziecko",
+		categoryName: "dziecko",
 		path: "dziecko",
 	},
 ];
