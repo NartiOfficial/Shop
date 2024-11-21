@@ -2,7 +2,7 @@ import styles from "./CartProduct.module.css";
 import REMOVE_ICON from "../../assets/remove.svg";
 import { Price } from "../Price/Price";
 
-export function CartProduct({ product }) {
+export function CartProduct({ product, onRemove }) {
 	const price = <Price product={product} />;
 
 	return (
@@ -20,7 +20,7 @@ export function CartProduct({ product }) {
 					{price}
 				</p>
 				<div className={styles.buttonRow}>
-					<button>
+					<button onClick={() => onRemove(product.id)}>
 						<img src={REMOVE_ICON} alt='' />
 						Usuń
 					</button>
