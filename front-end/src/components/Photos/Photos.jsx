@@ -8,14 +8,14 @@ export function Photos({ product }) {
 	return (
 		<FlexContainer>
 			<div className={styles.thumbnails}>
-				{product.photos.map((photo) => {
+				{product.photos.map((photo, index) => {
 					return (
 						<img
 							className={currentPhoto === photo ? styles.active : ""}
 							onClick={() => {
 								setCurrentPhoto(photo);
 							}}
-							key={photo}
+							key={index}
 							src={photo}
 						/>
 					);
