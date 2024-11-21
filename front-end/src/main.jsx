@@ -12,12 +12,18 @@ import { ProductsList } from "./views/ProductsList/ProductsList.jsx";
 import { ProductDetails } from "./views/ProductDetails/ProductDetails.jsx";
 import { productListLoader } from "./api/productListLoader.js";
 import { productLoader } from "./api/productLoader.js";
+import { favouritesLoader } from "./api/favouritesLoader.js";
+import { deleteFavouriteAction } from "./api/deleteFavouriteAction.js";
 import { addProductToFavouritesAction } from "./api/addProductToFavouritesAction.js";
 
 const router = createBrowserRouter([
 	{
 		path: "/add-to-favourites/:productId",
 		action: addProductToFavouritesAction,
+	},
+	{
+		path: "/delete-from-favourites/:favouriteId",
+		action: deleteFavouriteAction,
 	},
 	{
 		path: "",
@@ -30,6 +36,7 @@ const router = createBrowserRouter([
 			{
 				path: "/ulubione",
 				element: <Favourites />,
+				loader: favouritesLoader,
 			},
 			{
 				path: "/:gender?",
